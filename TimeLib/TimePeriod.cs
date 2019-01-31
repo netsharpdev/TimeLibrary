@@ -40,7 +40,7 @@ namespace TimeLib
         /// <returns>Returns formatted TimePeriod HH:mm:ss.</returns>
         public override string ToString()
         {
-            return $"{FormatValue(Hours)}:{FormatValue(Minutes)}:{FormatValue(Seconds)}";
+            return $"{Hours}:{Minutes}:{Seconds}";
         }
 
         /// <summary>
@@ -144,15 +144,6 @@ namespace TimeLib
             }
             return new TimePeriod(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
 
-        }
-        private string FormatValue(byte val)
-        {
-            if (val < 10)
-            {
-                return $"0{val}";
-            }
-
-            return $"{val}";
         }
     }
 }
