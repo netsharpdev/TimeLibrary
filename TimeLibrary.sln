@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeLibrary", "TimeLibrary\TimeLibrary.csproj", "{6C757BF8-8ADA-400E-B431-B26A0F91A534}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeLibrary.Tests", "TimeLibrary.Tests\TimeLibrary.Tests.csproj", "{CB541EC7-A1B9-43CA-B4DA-325B8BEC9B7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6C757BF8-8ADA-400E-B431-B26A0F91A534}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C757BF8-8ADA-400E-B431-B26A0F91A534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C757BF8-8ADA-400E-B431-B26A0F91A534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB541EC7-A1B9-43CA-B4DA-325B8BEC9B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB541EC7-A1B9-43CA-B4DA-325B8BEC9B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB541EC7-A1B9-43CA-B4DA-325B8BEC9B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB541EC7-A1B9-43CA-B4DA-325B8BEC9B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
