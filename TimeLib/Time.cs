@@ -158,6 +158,11 @@ namespace TimeLib
             return new Time(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
 
         }
+
+        public static Time operator -(Time time1, Time time2)
+        {
+            throw new NotImplementedException();
+        }
         private string FormatValue(byte val)
         {
             if (val < 10)

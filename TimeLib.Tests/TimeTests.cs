@@ -20,6 +20,15 @@ namespace Tests
             Assert.AreEqual(new Time(15, 15, 5), result);
         }
         [Test]
+        public void MinusOperatorTest()
+        {
+            Time time1 = new Time(13, 12, 2);
+            Time time2 = new Time(1, 15, 10);
+
+            var result = time1 - time2;
+            Assert.AreEqual(new Time(11, 56, 52), result);
+        }
+        [Test]
         [TestCase(13,20,1, "13:20:01")]
         [TestCase(1, 1, 1, "01:01:01")]
         [TestCase(0, 0, 0, "00:00:00")]
