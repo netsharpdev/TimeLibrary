@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using TimeLibrary;
+using TimeLib;
 
 namespace Tests
 {
