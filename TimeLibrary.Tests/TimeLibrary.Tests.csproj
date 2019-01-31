@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TimeLibrary\TimeLibrary.csproj" />
+    <ProjectReference Include="..\TimeLib\TimeLib.csproj" />
   </ItemGroup>
 
 </Project>
