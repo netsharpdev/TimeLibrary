@@ -37,27 +37,29 @@ namespace TimeLibrary
             return $"{FormatValue(_hours)}:{FormatValue(_minutes)}:{FormatValue(_seconds)}";
         }
 
-        private string FormatValue(byte val)
-        {
-            if (val < 10)
-            {
-                return $"0{val}";
-            }
-
-            return $"{val}";
-        }
-
+        /// <summary>
+        /// Compare time to other time structure.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(Time other)
         {
             return _hours == other._hours && _minutes == other._minutes && _seconds == other._seconds;
         }
-
+        /// <summary>
+        /// Compare structure to other object.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             return obj is Time && Equals((Time) obj);
         }
-
+        /// <summary>
+        /// Generate hashcode of structure.
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             unchecked
@@ -69,7 +71,7 @@ namespace TimeLibrary
             }
         }
         /// <summary>
-        /// Compares one time instance to another
+        /// Compare one time instance to another
         /// </summary>
         /// <param name="other">Structure to compare</param>
         /// <returns>1 if base time is greater, 0 if base time is equal to other and -1 if time is smaller than other</returns>
@@ -101,6 +103,16 @@ namespace TimeLibrary
             }
 
             return _seconds == other._seconds ? 0 : -1;
+        }
+
+        private string FormatValue(byte val)
+        {
+            if (val < 10)
+            {
+                return $"0{val}";
+            }
+
+            return $"{val}";
         }
     }
 }
