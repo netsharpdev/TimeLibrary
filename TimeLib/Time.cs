@@ -8,6 +8,17 @@ namespace TimeLib
 {
     public struct Time : IEquatable<Time>, IComparable<Time>
     {
+        internal struct OperationalValues
+        {
+            internal OperationalValues(int baseSeconds, int factorSeconds)
+            {
+                BaseSeconds = baseSeconds;
+                FactorSeconds = factorSeconds;
+            }
+            internal int BaseSeconds { get; set; }
+            internal int FactorSeconds { get; set; }
+        }
+
         public Time(byte hour) : this(hour, 0){}
 
         public Time(byte hour, byte minute) : this(hour, minute, 0){}
@@ -131,37 +142,47 @@ namespace TimeLib
 
         public static Time operator +(Time time1, Time time2)
         {
-            var minutes = time1.Minutes + time2.Minutes;
-            var hours = time1.Hours + time2.Hours;
-            var seconds = time1.Seconds + time2.Seconds;
-            var secModulo = seconds % 60;
-            var secDivision = seconds / 60;
-            if (secDivision > 0)
-            {
-                minutes += secDivision;
-                seconds = secModulo;
-            }
-            var minModulo = minutes % 60;
-            var minDivision = minutes / 60;
-            if (minDivision > 0)
-            {
-                hours += minDivision;
-                minutes = minModulo;
-            }
-            var hDivision = hours / 24;
-            if (hDivision > 0)
-            {
-                hours = 24;
-                minutes = 0;
-                seconds = 0;
-            }
-            return new Time(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
+            var operationalValues = CalculateSeconds(time1, time2);
 
+            var result = operationalValues.BaseSeconds + operationalValues.FactorSeconds;
+
+            //If result is greater than 24h set 24h to prevent from getting more hours.
+            result = result > 86400 ? 86400 : result;
+            return CalculateHour(result);
         }
 
         public static Time operator -(Time time1, Time time2)
         {
-            throw new NotImplementedException();
+            var operationalValues = CalculateSeconds(time1, time2);
+
+            if (operationalValues.BaseSeconds < operationalValues.FactorSeconds)
+            {
+                throw new ArgumentOutOfRangeException(nameof(operationalValues.FactorSeconds),
+                    "Cannot substract bigger time value from base time");
+            }
+
+            var result = operationalValues.BaseSeconds - operationalValues.FactorSeconds;
+            return CalculateHour(result);
+        }
+
+        private static OperationalValues CalculateSeconds(Time time1, Time time2)
+        {
+            var baseSeconds = time1.Seconds + time1.Minutes * 60 + time1.Hours * 3600;
+            var additionalSeconds = time2.Seconds + time2.Minutes * 60 + time2.Hours * 3600;
+            return new OperationalValues(baseSeconds, additionalSeconds);
+        }
+
+        private static Time CalculateHour(int result)
+        {
+            var hours = result / 3600;
+            var minutes = (result - 3600 * hours) / 60;
+            var seconds = result - 60 * minutes - 3600 * hours;
+            return FromIntParams(hours, minutes, seconds);
+        }
+
+        private static Time FromIntParams(int hours, int minutes, int seconds)
+        {
+            return new Time(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
         }
         private string FormatValue(byte val)
         {
