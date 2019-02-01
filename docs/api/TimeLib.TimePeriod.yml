@@ -1,0 +1,1533 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeLib.TimePeriod
+  commentId: T:TimeLib.TimePeriod
+  id: TimePeriod
+  parent: TimeLib
+  children:
+  - TimeLib.TimePeriod.#ctor(System.Int64)
+  - TimeLib.TimePeriod.#ctor(System.Int64,System.Int64)
+  - TimeLib.TimePeriod.#ctor(System.Int64,System.Int64,System.Int64)
+  - TimeLib.TimePeriod.#ctor(System.String)
+  - TimeLib.TimePeriod.CompareTo(TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.Equals(System.Object)
+  - TimeLib.TimePeriod.Equals(TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.Hours
+  - TimeLib.TimePeriod.Minutes
+  - TimeLib.TimePeriod.op_Addition(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.op_Equality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.op_GreaterThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.op_GreaterThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.op_Inequality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.op_LessThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.op_LessThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.op_Subtraction(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  - TimeLib.TimePeriod.Seconds
+  - TimeLib.TimePeriod.ToString
+  langs:
+  - csharp
+  - vb
+  name: TimePeriod
+  nameWithType: TimePeriod
+  fullName: TimeLib.TimePeriod
+  type: Struct
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: TimePeriod
+    path: src/TimePeriod.cs
+    startLine: 9
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  syntax:
+    content: 'public struct TimePeriod : IEquatable<TimePeriod>, IComparable<TimePeriod>'
+    content.vb: >-
+      Public Structure TimePeriod
+
+          Implements IEquatable(Of TimePeriod), IComparable(Of TimePeriod)
+  implements:
+  - System.IEquatable{TimeLib.TimePeriod}
+  - System.IComparable{TimeLib.TimePeriod}
+  inheritedMembers:
+  - System.ValueType.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: TimeLib.TimePeriod.#ctor(System.String)
+  commentId: M:TimeLib.TimePeriod.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: TimePeriod(String)
+  nameWithType: TimePeriod.TimePeriod(String)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: .ctor
+    path: src/TimePeriod.cs
+    startLine: 25
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCreate time period from string.\n"
+  example: []
+  syntax:
+    content: public TimePeriod(string period)
+    parameters:
+    - id: period
+      type: System.String
+      description: Format H:mm:ss.
+    content.vb: Public Sub New(period As String)
+  overload: TimeLib.TimePeriod.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeLib.TimePeriod.#ctor(System.Int64)
+  commentId: M:TimeLib.TimePeriod.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: TimePeriod(Int64)
+  nameWithType: TimePeriod.TimePeriod(Int64)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.Int64)
+  type: Constructor
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: .ctor
+    path: src/TimePeriod.cs
+    startLine: 44
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  syntax:
+    content: public TimePeriod(long hour)
+    parameters:
+    - id: hour
+      type: System.Int64
+    content.vb: Public Sub New(hour As Long)
+  overload: TimeLib.TimePeriod.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeLib.TimePeriod.#ctor(System.Int64,System.Int64)
+  commentId: M:TimeLib.TimePeriod.#ctor(System.Int64,System.Int64)
+  id: '#ctor(System.Int64,System.Int64)'
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: TimePeriod(Int64, Int64)
+  nameWithType: TimePeriod.TimePeriod(Int64, Int64)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.Int64, System.Int64)
+  type: Constructor
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: .ctor
+    path: src/TimePeriod.cs
+    startLine: 46
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  syntax:
+    content: public TimePeriod(long hour, long minute)
+    parameters:
+    - id: hour
+      type: System.Int64
+    - id: minute
+      type: System.Int64
+    content.vb: Public Sub New(hour As Long, minute As Long)
+  overload: TimeLib.TimePeriod.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeLib.TimePeriod.#ctor(System.Int64,System.Int64,System.Int64)
+  commentId: M:TimeLib.TimePeriod.#ctor(System.Int64,System.Int64,System.Int64)
+  id: '#ctor(System.Int64,System.Int64,System.Int64)'
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: TimePeriod(Int64, Int64, Int64)
+  nameWithType: TimePeriod.TimePeriod(Int64, Int64, Int64)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.Int64, System.Int64, System.Int64)
+  type: Constructor
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: .ctor
+    path: src/TimePeriod.cs
+    startLine: 48
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  syntax:
+    content: public TimePeriod(long hour, long minute, long second)
+    parameters:
+    - id: hour
+      type: System.Int64
+    - id: minute
+      type: System.Int64
+    - id: second
+      type: System.Int64
+    content.vb: Public Sub New(hour As Long, minute As Long, second As Long)
+  overload: TimeLib.TimePeriod.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeLib.TimePeriod.Hours
+  commentId: P:TimeLib.TimePeriod.Hours
+  id: Hours
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Hours
+  nameWithType: TimePeriod.Hours
+  fullName: TimeLib.TimePeriod.Hours
+  type: Property
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: Hours
+    path: src/TimePeriod.cs
+    startLine: 64
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nHours.\n"
+  example: []
+  syntax:
+    content: public long Hours { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property Hours As Long
+  overload: TimeLib.TimePeriod.Hours*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeLib.TimePeriod.Minutes
+  commentId: P:TimeLib.TimePeriod.Minutes
+  id: Minutes
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Minutes
+  nameWithType: TimePeriod.Minutes
+  fullName: TimeLib.TimePeriod.Minutes
+  type: Property
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: Minutes
+    path: src/TimePeriod.cs
+    startLine: 69
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nMinutes.\n"
+  example: []
+  syntax:
+    content: public long Minutes { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property Minutes As Long
+  overload: TimeLib.TimePeriod.Minutes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeLib.TimePeriod.Seconds
+  commentId: P:TimeLib.TimePeriod.Seconds
+  id: Seconds
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Seconds
+  nameWithType: TimePeriod.Seconds
+  fullName: TimeLib.TimePeriod.Seconds
+  type: Property
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: Seconds
+    path: src/TimePeriod.cs
+    startLine: 74
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nSeconds.\n"
+  example: []
+  syntax:
+    content: public long Seconds { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property Seconds As Long
+  overload: TimeLib.TimePeriod.Seconds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeLib.TimePeriod.ToString
+  commentId: M:TimeLib.TimePeriod.ToString
+  id: ToString
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TimePeriod.ToString()
+  fullName: TimeLib.TimePeriod.ToString()
+  type: Method
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: ToString
+    path: src/TimePeriod.cs
+    startLine: 80
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nConvert structure into string.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: Returns formatted TimePeriod HH:mm:ss.
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: TimeLib.TimePeriod.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeLib.TimePeriod.Equals(TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.Equals(TimeLib.TimePeriod)
+  id: Equals(TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Equals(TimePeriod)
+  nameWithType: TimePeriod.Equals(TimePeriod)
+  fullName: TimeLib.TimePeriod.Equals(TimeLib.TimePeriod)
+  type: Method
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: Equals
+    path: src/TimePeriod.cs
+    startLine: 90
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCompare TimePeriod to other TimePeriod structure.\n"
+  example: []
+  syntax:
+    content: public bool Equals(TimePeriod other)
+    parameters:
+    - id: other
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function Equals(other As TimePeriod) As Boolean
+  overload: TimeLib.TimePeriod.Equals*
+  implements:
+  - System.IEquatable{TimeLib.TimePeriod}.Equals(TimeLib.TimePeriod)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeLib.TimePeriod.Equals(System.Object)
+  commentId: M:TimeLib.TimePeriod.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: TimePeriod.Equals(Object)
+  fullName: TimeLib.TimePeriod.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: Equals
+    path: src/TimePeriod.cs
+    startLine: 99
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCompare structure to other object.\n"
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: TimeLib.TimePeriod.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeLib.TimePeriod.CompareTo(TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.CompareTo(TimeLib.TimePeriod)
+  id: CompareTo(TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(TimePeriod)
+  nameWithType: TimePeriod.CompareTo(TimePeriod)
+  fullName: TimeLib.TimePeriod.CompareTo(TimeLib.TimePeriod)
+  type: Method
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: CompareTo
+    path: src/TimePeriod.cs
+    startLine: 110
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCompare one TimePeriod instance to another.\n"
+  example: []
+  syntax:
+    content: public int CompareTo(TimePeriod other)
+    parameters:
+    - id: other
+      type: TimeLib.TimePeriod
+      description: Structure to compare.
+    return:
+      type: System.Int32
+      description: 1 if base TimePeriod is greater, 0 if base TimePeriod is equal to other and -1 if TimePeriod is smaller than other.
+    content.vb: Public Function CompareTo(other As TimePeriod) As Integer
+  overload: TimeLib.TimePeriod.CompareTo*
+  implements:
+  - System.IComparable{TimeLib.TimePeriod}.CompareTo(TimeLib.TimePeriod)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeLib.TimePeriod.op_Equality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_Equality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_Equality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Equality(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.Equality(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.Equality(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_Equality
+    path: src/TimePeriod.cs
+    startLine: 145
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCheck if timePeriod1 is equal to timePeriod2.\n"
+  example: []
+  syntax:
+    content: public static bool operator ==(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if both instances are equal.
+    content.vb: Public Shared Operator =(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As Boolean
+  overload: TimeLib.TimePeriod.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeLib.TimePeriod.op_Inequality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_Inequality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_Inequality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Inequality(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.Inequality(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.Inequality(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_Inequality
+    path: src/TimePeriod.cs
+    startLine: 155
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCheck if timePeriod1 is not equal to timePeriod2.\n"
+  example: []
+  syntax:
+    content: public static bool operator !=(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if both instances are not equal.
+    content.vb: Public Shared Operator <>(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As Boolean
+  overload: TimeLib.TimePeriod.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeLib.TimePeriod.op_LessThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_LessThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_LessThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: LessThan(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.LessThan(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.LessThan(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_LessThan
+    path: src/TimePeriod.cs
+    startLine: 165
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCheck if timePeriod1 is shorter than timePeriod2.\n"
+  example: []
+  syntax:
+    content: public static bool operator <(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if timePeriod1 is shorter than timePeriod2.
+    content.vb: Public Shared Operator <(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As Boolean
+  overload: TimeLib.TimePeriod.op_LessThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeLib.TimePeriod.op_GreaterThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_GreaterThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_GreaterThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: GreaterThan(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.GreaterThan(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.GreaterThan(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_GreaterThan
+    path: src/TimePeriod.cs
+    startLine: 175
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCheck if timePeriod1 is longer than timePeriod2.\n"
+  example: []
+  syntax:
+    content: public static bool operator>(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if timePeriod1 is longer than timePeriod2.
+    content.vb: Public Shared Operator>(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As Boolean
+  overload: TimeLib.TimePeriod.op_GreaterThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeLib.TimePeriod.op_GreaterThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_GreaterThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_GreaterThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: GreaterThanOrEqual(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.GreaterThanOrEqual(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.GreaterThanOrEqual(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_GreaterThanOrEqual
+    path: src/TimePeriod.cs
+    startLine: 185
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCheck if timePeriod1 is longer or equal to timePeriod2.\n"
+  example: []
+  syntax:
+    content: public static bool operator >=(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if timePeriod1 is longer or equal to timePeriod2.
+    content.vb: Public Shared Operator >=(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As Boolean
+  overload: TimeLib.TimePeriod.op_GreaterThanOrEqual*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeLib.TimePeriod.op_LessThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_LessThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_LessThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: LessThanOrEqual(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.LessThanOrEqual(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.LessThanOrEqual(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_LessThanOrEqual
+    path: src/TimePeriod.cs
+    startLine: 195
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nCheck if timePeriod1 is shorter or equal to timePeriod2.\n"
+  example: []
+  syntax:
+    content: public static bool operator <=(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if timePeriod1 is shorter or equal to timePeriod2.
+    content.vb: Public Shared Operator <=(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As Boolean
+  overload: TimeLib.TimePeriod.op_LessThanOrEqual*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeLib.TimePeriod.op_Addition(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_Addition(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_Addition(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Addition(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.Addition(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.Addition(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_Addition
+    path: src/TimePeriod.cs
+    startLine: 205
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nAdd one time period instance to another.\n"
+  example: []
+  syntax:
+    content: public static TimePeriod operator +(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: TimeLib.TimePeriod
+      description: New instance of time period.
+    content.vb: Public Shared Operator +(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As TimePeriod
+  overload: TimeLib.TimePeriod.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeLib.TimePeriod.op_Subtraction(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  commentId: M:TimeLib.TimePeriod.op_Subtraction(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  id: op_Subtraction(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  parent: TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(TimePeriod, TimePeriod)
+  nameWithType: TimePeriod.Subtraction(TimePeriod, TimePeriod)
+  fullName: TimeLib.TimePeriod.Subtraction(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  type: Operator
+  source:
+    remote:
+      path: TimeLib/src/TimePeriod.cs
+      branch: documentation
+      repo: git@github.com:NetsharpDEV/TimeLibrary.git
+    id: op_Subtraction
+    path: src/TimePeriod.cs
+    startLine: 219
+  assemblies:
+  - TimeLib
+  namespace: TimeLib
+  summary: "\nSubstract timePeriod2 instance from timePeriod1.\n"
+  example: []
+  syntax:
+    content: public static TimePeriod operator -(TimePeriod timePeriod1, TimePeriod timePeriod2)
+    parameters:
+    - id: timePeriod1
+      type: TimeLib.TimePeriod
+      description: ''
+    - id: timePeriod2
+      type: TimeLib.TimePeriod
+      description: ''
+    return:
+      type: TimeLib.TimePeriod
+      description: New instance of time period.
+    content.vb: Public Shared Operator -(timePeriod1 As TimePeriod, timePeriod2 As TimePeriod) As TimePeriod
+  overload: TimeLib.TimePeriod.op_Subtraction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeLib
+  commentId: N:TimeLib
+  name: TimeLib
+  nameWithType: TimeLib
+  fullName: TimeLib
+- uid: System.IEquatable{TimeLib.TimePeriod}
+  commentId: T:System.IEquatable{TimeLib.TimePeriod}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<TimePeriod>
+  nameWithType: IEquatable<TimePeriod>
+  fullName: System.IEquatable<TimeLib.TimePeriod>
+  nameWithType.vb: IEquatable(Of TimePeriod)
+  fullName.vb: System.IEquatable(Of TimeLib.TimePeriod)
+  name.vb: IEquatable(Of TimePeriod)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IComparable{TimeLib.TimePeriod}
+  commentId: T:System.IComparable{TimeLib.TimePeriod}
+  parent: System
+  definition: System.IComparable`1
+  name: IComparable<TimePeriod>
+  nameWithType: IComparable<TimePeriod>
+  fullName: System.IComparable<TimeLib.TimePeriod>
+  nameWithType.vb: IComparable(Of TimePeriod)
+  fullName.vb: System.IComparable(Of TimeLib.TimePeriod)
+  name.vb: IComparable(Of TimePeriod)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeLib.TimePeriod.#ctor*
+  commentId: Overload:TimeLib.TimePeriod.#ctor
+  name: TimePeriod
+  nameWithType: TimePeriod.TimePeriod
+  fullName: TimeLib.TimePeriod.TimePeriod
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: TimeLib.TimePeriod.Hours*
+  commentId: Overload:TimeLib.TimePeriod.Hours
+  name: Hours
+  nameWithType: TimePeriod.Hours
+  fullName: TimeLib.TimePeriod.Hours
+- uid: TimeLib.TimePeriod.Minutes*
+  commentId: Overload:TimeLib.TimePeriod.Minutes
+  name: Minutes
+  nameWithType: TimePeriod.Minutes
+  fullName: TimeLib.TimePeriod.Minutes
+- uid: TimeLib.TimePeriod.Seconds*
+  commentId: Overload:TimeLib.TimePeriod.Seconds
+  name: Seconds
+  nameWithType: TimePeriod.Seconds
+  fullName: TimeLib.TimePeriod.Seconds
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeLib.TimePeriod.ToString*
+  commentId: Overload:TimeLib.TimePeriod.ToString
+  name: ToString
+  nameWithType: TimePeriod.ToString
+  fullName: TimeLib.TimePeriod.ToString
+- uid: TimeLib.TimePeriod.Equals*
+  commentId: Overload:TimeLib.TimePeriod.Equals
+  name: Equals
+  nameWithType: TimePeriod.Equals
+  fullName: TimeLib.TimePeriod.Equals
+- uid: System.IEquatable{TimeLib.TimePeriod}.Equals(TimeLib.TimePeriod)
+  commentId: M:System.IEquatable{TimeLib.TimePeriod}.Equals(TimeLib.TimePeriod)
+  parent: System.IEquatable{TimeLib.TimePeriod}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(TimePeriod)
+  nameWithType: IEquatable<TimePeriod>.Equals(TimePeriod)
+  fullName: System.IEquatable<TimeLib.TimePeriod>.Equals(TimeLib.TimePeriod)
+  nameWithType.vb: IEquatable(Of TimePeriod).Equals(TimePeriod)
+  fullName.vb: System.IEquatable(Of TimeLib.TimePeriod).Equals(TimeLib.TimePeriod)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<TimePeriod>.Equals
+    fullName: System.IEquatable<TimeLib.TimePeriod>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of TimePeriod).Equals
+    fullName: System.IEquatable(Of TimeLib.TimePeriod).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeLib.TimePeriod
+  commentId: T:TimeLib.TimePeriod
+  parent: TimeLib
+  name: TimePeriod
+  nameWithType: TimePeriod
+  fullName: TimeLib.TimePeriod
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeLib.TimePeriod.CompareTo*
+  commentId: Overload:TimeLib.TimePeriod.CompareTo
+  name: CompareTo
+  nameWithType: TimePeriod.CompareTo
+  fullName: TimeLib.TimePeriod.CompareTo
+- uid: System.IComparable{TimeLib.TimePeriod}.CompareTo(TimeLib.TimePeriod)
+  commentId: M:System.IComparable{TimeLib.TimePeriod}.CompareTo(TimeLib.TimePeriod)
+  parent: System.IComparable{TimeLib.TimePeriod}
+  definition: System.IComparable`1.CompareTo(`0)
+  name: CompareTo(TimePeriod)
+  nameWithType: IComparable<TimePeriod>.CompareTo(TimePeriod)
+  fullName: System.IComparable<TimeLib.TimePeriod>.CompareTo(TimeLib.TimePeriod)
+  nameWithType.vb: IComparable(Of TimePeriod).CompareTo(TimePeriod)
+  fullName.vb: System.IComparable(Of TimeLib.TimePeriod).CompareTo(TimeLib.TimePeriod)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<TimePeriod>.CompareTo
+    fullName: System.IComparable<TimeLib.TimePeriod>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of TimePeriod).CompareTo
+    fullName: System.IComparable(Of TimeLib.TimePeriod).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeLib.TimePeriod
+    name: TimePeriod
+    nameWithType: TimePeriod
+    fullName: TimeLib.TimePeriod
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.IComparable`1.CompareTo(`0)
+  commentId: M:System.IComparable`1.CompareTo(`0)
+  isExternal: true
+  name: CompareTo(T)
+  nameWithType: IComparable<T>.CompareTo(T)
+  fullName: System.IComparable<T>.CompareTo(T)
+  nameWithType.vb: IComparable(Of T).CompareTo(T)
+  fullName.vb: System.IComparable(Of T).CompareTo(T)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<T>.CompareTo
+    fullName: System.IComparable<T>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of T).CompareTo
+    fullName: System.IComparable(Of T).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeLib.TimePeriod.op_Equality*
+  commentId: Overload:TimeLib.TimePeriod.op_Equality
+  name: Equality
+  nameWithType: TimePeriod.Equality
+  fullName: TimeLib.TimePeriod.Equality
+- uid: TimeLib.TimePeriod.op_Inequality*
+  commentId: Overload:TimeLib.TimePeriod.op_Inequality
+  name: Inequality
+  nameWithType: TimePeriod.Inequality
+  fullName: TimeLib.TimePeriod.Inequality
+- uid: TimeLib.TimePeriod.op_LessThan*
+  commentId: Overload:TimeLib.TimePeriod.op_LessThan
+  name: LessThan
+  nameWithType: TimePeriod.LessThan
+  fullName: TimeLib.TimePeriod.LessThan
+- uid: TimeLib.TimePeriod.op_GreaterThan*
+  commentId: Overload:TimeLib.TimePeriod.op_GreaterThan
+  name: GreaterThan
+  nameWithType: TimePeriod.GreaterThan
+  fullName: TimeLib.TimePeriod.GreaterThan
+- uid: TimeLib.TimePeriod.op_GreaterThanOrEqual*
+  commentId: Overload:TimeLib.TimePeriod.op_GreaterThanOrEqual
+  name: GreaterThanOrEqual
+  nameWithType: TimePeriod.GreaterThanOrEqual
+  fullName: TimeLib.TimePeriod.GreaterThanOrEqual
+- uid: TimeLib.TimePeriod.op_LessThanOrEqual*
+  commentId: Overload:TimeLib.TimePeriod.op_LessThanOrEqual
+  name: LessThanOrEqual
+  nameWithType: TimePeriod.LessThanOrEqual
+  fullName: TimeLib.TimePeriod.LessThanOrEqual
+- uid: TimeLib.TimePeriod.op_Addition*
+  commentId: Overload:TimeLib.TimePeriod.op_Addition
+  name: Addition
+  nameWithType: TimePeriod.Addition
+  fullName: TimeLib.TimePeriod.Addition
+- uid: TimeLib.TimePeriod.op_Subtraction*
+  commentId: Overload:TimeLib.TimePeriod.op_Subtraction
+  name: Subtraction
+  nameWithType: TimePeriod.Subtraction
+  fullName: TimeLib.TimePeriod.Subtraction

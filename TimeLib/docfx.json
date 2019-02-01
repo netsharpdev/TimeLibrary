@@ -9,7 +9,7 @@
           "src": "C:\\Source\\Studia\\TimeLibrary\\TimeLib"
         }
       ],
-      "dest": "api",
+      "dest": "../docs/api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -18,14 +18,14 @@
     "content": [
       {
         "files": [
-          "api/**.yml",
-          "api/index.md"
+          "../docs/api/**.yml",
+          "../docs/api/index.md"
         ]
       },
       {
         "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
+          "../docs/articles/**.md",
+          "../docs/articles/**/toc.yml",
           "toc.yml",
           "*.md"
         ]
@@ -34,14 +34,14 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "../docs/images/**"
         ]
       }
     ],
     "overwrite": [
       {
         "files": [
-          "apidoc/**.md"
+          "../docs/apidoc/**.md"
         ],
         "exclude": [
           "obj/**",
@@ -49,7 +49,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "../docs/",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

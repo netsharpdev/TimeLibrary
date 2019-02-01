@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeLib
+  commentId: N:TimeLib
+  id: TimeLib
+  children:
+  - TimeLib.Time
+  - TimeLib.TimePeriod
+  langs:
+  - csharp
+  - vb
+  name: TimeLib
+  nameWithType: TimeLib
+  fullName: TimeLib
+  type: Namespace
+  assemblies:
+  - TimeLib
+references:
+- uid: TimeLib.Time
+  commentId: T:TimeLib.Time
+  parent: TimeLib
+  name: Time
+  nameWithType: Time
+  fullName: TimeLib.Time
+- uid: TimeLib.TimePeriod
+  commentId: T:TimeLib.TimePeriod
+  parent: TimeLib
+  name: TimePeriod
+  nameWithType: TimePeriod
+  fullName: TimeLib.TimePeriod
+- uid: TimeLib
+  commentId: N:TimeLib
+  name: TimeLib
+  nameWithType: TimeLib
+  fullName: TimeLib
