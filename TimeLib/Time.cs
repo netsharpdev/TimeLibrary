@@ -8,7 +8,7 @@ namespace TimeLib
 {
     public struct Time : IEquatable<Time>, IComparable<Time>
     {
-        internal struct OperationalValues
+        private struct OperationalValues
         {
             internal OperationalValues(int baseSeconds, int factorSeconds)
             {
