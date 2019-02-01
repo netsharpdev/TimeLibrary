@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TimeLib\TimeLib.csproj" />
+    <ProjectReference Include="..\..\Src\TimeLib\TimeLib.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeLib", "TimeLib\TimeLib.csproj", "{0730EEEE-35B1-45EB-B8D2-C91BA8325570}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeLib", "Src\TimeLib\TimeLib.csproj", "{0730EEEE-35B1-45EB-B8D2-C91BA8325570}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeLib.Tests", "TimeLib.Tests\TimeLib.Tests.csproj", "{F80EFA58-3A7B-419F-9E34-CE88842CFAA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeLib.Tests", "Tests\TimeLib.Tests\TimeLib.Tests.csproj", "{F80EFA58-3A7B-419F-9E34-CE88842CFAA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{512B18EC-171A-449B-B7A4-AC8D4146087C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{978526F3-8B81-4160-A4DB-C2F17A927AD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0730EEEE-35B1-45EB-B8D2-C91BA8325570} = {512B18EC-171A-449B-B7A4-AC8D4146087C}
+		{F80EFA58-3A7B-419F-9E34-CE88842CFAA5} = {978526F3-8B81-4160-A4DB-C2F17A927AD1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47FD9A73-748F-4857-83A2-DD304D48021F}
