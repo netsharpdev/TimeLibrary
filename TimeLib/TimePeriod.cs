@@ -8,12 +8,27 @@ namespace TimeLib
 {
     public struct TimePeriod : IEquatable<TimePeriod>, IComparable<TimePeriod>
     {
-        public TimePeriod(byte hour) : this(hour, 0) { }
-
-        public TimePeriod(byte hour, byte minute) : this(hour, minute, 0) { }
-
-        public TimePeriod(byte hour, byte minute, byte second)
+        private struct OperationalValues
         {
+            internal OperationalValues(long baseSeconds, long factorSeconds)
+            {
+                BaseSeconds = baseSeconds;
+                FactorSeconds = factorSeconds;
+            }
+            internal long BaseSeconds { get; set; }
+            internal long FactorSeconds { get; set; }
+        }
+
+        public TimePeriod(long hour) : this(hour, 0) { }
+
+        public TimePeriod(long hour, long minute) : this(hour, minute, 0) { }
+
+        public TimePeriod(long hour, long minute, long second)
+        {
+            if (minute > 59)
+                throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59");
+            if (second > 59)
+                throw new ArgumentOutOfRangeException(nameof(second), "Seconds cannot exceed 59");
             Hours = hour;
             Minutes = minute;
             Seconds = second;
@@ -22,17 +37,17 @@ namespace TimeLib
         /// <summary>
         /// Hours of point in TimePeriod
         /// </summary>
-        public byte Hours { get; }
+        public long Hours { get; }
 
         /// <summary>
         /// Minutes of point in TimePeriod
         /// </summary>
-        public byte Minutes { get; }
+        public long Minutes { get; }
 
         /// <summary>
         /// Seconds of point in TimePeriod
         /// </summary>
-        public byte Seconds { get; }
+        public long Seconds { get; }
 
         /// <summary>
         /// Convert structure into string.
@@ -125,25 +140,41 @@ namespace TimeLib
 
         public static TimePeriod operator +(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
-            var minutes = timePeriod1.Minutes + timePeriod2.Minutes;
-            var hours = timePeriod1.Hours + timePeriod2.Hours;
-            var seconds = timePeriod1.Seconds + timePeriod2.Seconds;
-            var secModulo = seconds % 60;
-            var secDivision = seconds / 60;
-            if (secDivision > 0)
-            {
-                minutes += secDivision;
-                seconds = secModulo;
-            }
-            var minModulo = minutes % 60;
-            var minDivision = minutes / 60;
-            if (minDivision > 0)
-            {
-                hours += minDivision;
-                minutes = minModulo;
-            }
-            return new TimePeriod(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
+            var operationalValues = CalculateSeconds(timePeriod1, timePeriod2);
 
+            var result = operationalValues.BaseSeconds + operationalValues.FactorSeconds;
+
+            //If result is greater than 24h set 24h to prevent from getting more hours.
+            result = result > 86400 ? 86400 : result;
+            return CalculateHour(result);
+
+        }
+        public static TimePeriod operator -(TimePeriod timePeriod1, TimePeriod timePeriod2)
+        {
+            var operationalValues = CalculateSeconds(timePeriod1, timePeriod2);
+
+            if (operationalValues.BaseSeconds < operationalValues.FactorSeconds)
+            {
+                throw new ArgumentOutOfRangeException(nameof(operationalValues.FactorSeconds),
+                    "Cannot substract bigger timeperiod value from base timeperiod");
+            }
+
+            var result = operationalValues.BaseSeconds - operationalValues.FactorSeconds;
+            return CalculateHour(result);
+        }
+        private static OperationalValues CalculateSeconds(TimePeriod time1, TimePeriod time2)
+        {
+            var baseSeconds = time1.Seconds + time1.Minutes * 60 + time1.Hours * 3600;
+            var additionalSeconds = time2.Seconds + time2.Minutes * 60 + time2.Hours * 3600;
+            return new OperationalValues(baseSeconds, additionalSeconds);
+        }
+
+        private static TimePeriod CalculateHour(long result)
+        {
+            var hours = result / 3600;
+            var minutes = (result - 3600 * hours) / 60;
+            var seconds = result - 60 * minutes - 3600 * hours;
+            return new TimePeriod(hours, minutes, seconds);
         }
     }
 }
