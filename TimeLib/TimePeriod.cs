@@ -22,7 +22,7 @@ namespace TimeLib
         /// <summary>
         /// Create time period from string.
         /// </summary>
-        /// <param name="period">Format H:mm:ss</param>
+        /// <param name="period">Format H:mm:ss.</param>
         public TimePeriod(string period)
         {
             var splittedPeriod = period.Split(':');
@@ -60,17 +60,17 @@ namespace TimeLib
         }
 
         /// <summary>
-        /// Hours
+        /// Hours.
         /// </summary>
         public long Hours { get; }
 
         /// <summary>
-        /// Minutes
+        /// Minutes.
         /// </summary>
         public long Minutes { get; }
 
         /// <summary>
-        /// Seconds
+        /// Seconds.
         /// </summary>
         public long Seconds { get; }
 
@@ -104,10 +104,10 @@ namespace TimeLib
         }
 
         /// <summary>
-        /// Compare one TimePeriod instance to another
+        /// Compare one TimePeriod instance to another.
         /// </summary>
-        /// <param name="other">Structure to compare</param>
-        /// <returns>1 if base TimePeriod is greater, 0 if base TimePeriod is equal to other and -1 if TimePeriod is smaller than other</returns>
+        /// <param name="other">Structure to compare.</param>
+        /// <returns>1 if base TimePeriod is greater, 0 if base TimePeriod is equal to other and -1 if TimePeriod is smaller than other.</returns>
         public int CompareTo(TimePeriod other)
         {
             if (Hours > other.Hours)
@@ -137,32 +137,72 @@ namespace TimeLib
 
             return Seconds == other.Seconds ? 0 : -1;
         }
-
+        /// <summary>
+        /// Check if timePeriod1 is equal to timePeriod2.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>True if both instances are equal.</returns>
         public static bool operator ==(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             return Equals(timePeriod1, timePeriod2);
         }
+        /// <summary>
+        /// Check if timePeriod1 is not equal to timePeriod2.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>True if both instances are not equal.</returns>
         public static bool operator !=(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             return !Equals(timePeriod1, timePeriod2);
         }
+        /// <summary>
+        /// Check if timePeriod1 is shorter than timePeriod2.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>True if timePeriod1 is shorter than timePeriod2.</returns>
         public static bool operator <(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             return timePeriod1.CompareTo(timePeriod2) == -1;
         }
+        /// <summary>
+        /// Check if timePeriod1 is longer than timePeriod2.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>True if timePeriod1 is longer than timePeriod2.</returns>
         public static bool operator >(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             return timePeriod1.CompareTo(timePeriod2) == 1;
-        }
+        }   
+        /// <summary>
+        /// Check if timePeriod1 is longer or equal to timePeriod2.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>True if timePeriod1 is longer or equal to timePeriod2.</returns>
         public static bool operator >=(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             return timePeriod1.CompareTo(timePeriod2) == 1 || timePeriod1.Equals(timePeriod2);
         }
+        /// <summary>
+        /// Check if timePeriod1 is shorter or equal to timePeriod2.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>True if timePeriod1 is shorter or equal to timePeriod2.</returns>
         public static bool operator <=(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             return timePeriod1.CompareTo(timePeriod2) == -1 || timePeriod1.Equals(timePeriod2);
         }
-
+        /// <summary>
+        /// Add one time period instance to another.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>New instance of time period.</returns>
         public static TimePeriod operator +(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             var operationalValues = CalculateSeconds(timePeriod1, timePeriod2);
@@ -171,6 +211,12 @@ namespace TimeLib
             return CalculateHour(result);
 
         }
+        /// <summary>
+        /// Substract timePeriod2 instance from timePeriod1.
+        /// </summary>
+        /// <param name="timePeriod1"></param>
+        /// <param name="timePeriod2"></param>
+        /// <returns>New instance of time period.</returns>
         public static TimePeriod operator -(TimePeriod timePeriod1, TimePeriod timePeriod2)
         {
             var operationalValues = CalculateSeconds(timePeriod1, timePeriod2);

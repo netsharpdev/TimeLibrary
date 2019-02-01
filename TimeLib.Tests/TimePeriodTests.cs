@@ -14,7 +14,15 @@ namespace Tests
         public void Setup()
         {
         }
-
+        [Test]
+        [TestCase("163:20:01", 163, 20, 1)]
+        public void FromStringConstructorTest(string timePeriod, long resultHours, long resultMinutes, long resultSeconds)
+        {
+            var period = new TimePeriod(timePeriod);
+            Assert.AreEqual(period.Hours, resultHours);
+            Assert.AreEqual(period.Minutes, resultMinutes);
+            Assert.AreEqual(period.Seconds, resultSeconds);
+        }
         [Test]
         public void PlusOperatorTest()
         {
@@ -34,9 +42,9 @@ namespace Tests
             Assert.AreEqual(new TimePeriod(23, 56, 52), result);
         }
         [Test]
-        [TestCase(13, 20, 1, "163:20:01")]
+        [TestCase(163, 20, 1, "163:20:01")]
         [TestCase(1, 1, 1, "1:01:01")]
-        [TestCase(0, 0, 0, "00:00:00")]
+        [TestCase(0, 0, 0, "0:00:00")]
         public void ToStringMethodTest(byte hour, byte minute, byte sec, string result)
         {
             TimePeriod time1 = new TimePeriod(hour, minute, sec);
