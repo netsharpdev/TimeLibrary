@@ -3,11 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeLib.Library;
 
 namespace TimeLib
 {
     public struct Time : IEquatable<Time>, IComparable<Time>
     {
+        private struct OperationalValues
+        {
+            internal OperationalValues(int baseSeconds, int factorSeconds)
+            {
+                BaseSeconds = baseSeconds;
+                FactorSeconds = factorSeconds;
+            }
+            internal int BaseSeconds { get; set; }
+            internal int FactorSeconds { get; set; }
+        }
+        /// <summary>
+        /// Create time from string.
+        /// </summary>
+        /// <param name="time">Format HH:mm:ss.</param>
+        public Time(string time)
+        {
+            var splittedTime = time.Split(':');
+            if (splittedTime.Length < 3)
+                throw new ArgumentException("Argument has to be in proper format HH:mm:ss", nameof(time));
+            var hour = Convert.ToByte(splittedTime[0]);;
+            var minute = Convert.ToByte(splittedTime[1]);
+            var second = Convert.ToByte(splittedTime[2]);
+            if (hour > 24)
+                throw new ArgumentOutOfRangeException(nameof(hour), "Hours cannot exceed 24");
+            if (minute > 59)
+                throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59");
+            if (second > 59)
+                throw new ArgumentOutOfRangeException(nameof(second), "Seconds cannot exceed 59");
+            Hours = hour;
+            Minutes = minute;
+            Seconds = second;
+        }
         public Time(byte hour) : this(hour, 0){}
 
         public Time(byte hour, byte minute) : this(hour, minute, 0){}
@@ -26,17 +59,17 @@ namespace TimeLib
         }
 
         /// <summary>
-        /// Hours of point in time
+        /// Hours.
         /// </summary>
         public byte Hours { get; }
 
         /// <summary>
-        /// Minutes of point in time
+        /// Minutes.
         /// </summary>
         public byte Minutes { get; }
 
         /// <summary>
-        /// Seconds of point in time
+        /// Seconds.
         /// </summary>
         public byte Seconds { get; }
 
@@ -46,7 +79,7 @@ namespace TimeLib
         /// <returns>Returns formatted time HH:mm:ss.</returns>
         public override string ToString()
         {
-            return $"{FormatValue(Hours)}:{FormatValue(Minutes)}:{FormatValue(Seconds)}";
+            return $"{Utilities.FormatValue(Hours)}:{Utilities.FormatValue(Minutes)}:{Utilities.FormatValue(Seconds)}";
         }
 
         /// <summary>
@@ -70,10 +103,10 @@ namespace TimeLib
         }
   
         /// <summary>
-        /// Compare one time instance to another
+        /// Compare one time instance to another.
         /// </summary>
-        /// <param name="other">Structure to compare</param>
-        /// <returns>1 if base time is greater, 0 if base time is equal to other and -1 if time is smaller than other</returns>
+        /// <param name="other">Structure to compare.</param>
+        /// <returns>1 if base time is greater, 0 if base time is equal to other and -1 if time is smaller than other.</returns>
         public int CompareTo(Time other)
         {
             if (Hours > other.Hours)
@@ -103,69 +136,152 @@ namespace TimeLib
 
             return Seconds == other.Seconds ? 0 : -1;
         }
-
+        /// <summary>
+        /// Check if time1 is equal to time2.
+        /// </summary>
+        /// <param name="time1"></param>
+        /// <param name="time2"></param>
+        /// <returns>True if both instances are equal.</returns>
         public static bool operator ==(Time time1, Time time2)
         {
             return Equals(time1, time2);
-        }
+        } 
+        /// <summary>
+        /// Check if time1 is not equal to time2.
+        /// </summary>
+        /// <param name="time1"></param>
+        /// <param name="time2"></param>
+        /// <returns>True if both instances are not equal.</returns>
         public static bool operator !=(Time time1, Time time2)
         {
             return !Equals(time1, time2);
         }
+        /// <summary>
+        /// Check if time1 is smaller than time2.
+        /// </summary>
+        /// <param name="time1"></param>
+        /// <param name="time2"></param>
+        /// <returns>True if time1 is smaller than time2.</returns>
         public static bool operator <(Time time1, Time time2)
         {
             return time1.CompareTo(time2) == -1;
         }
+        /// <summary>
+        /// Check if time1 is greater than time2.
+        /// </summary>
+        /// <param name="time1"></param>
+        /// <param name="time2"></param>
+        /// <returns>True if time1 is greater than time2.</returns>
         public static bool operator >(Time time1, Time time2)
         {
             return time1.CompareTo(time2) == 1;
         }
+        /// <summary>
+        /// Check if time1 is is greater or equal to time2.
+        /// </summary>
+        /// <param name="time1"></param>
+        /// <param name="time2"></param>
+        /// <returns>True if time1 is greater or equal to time2.</returns>
         public static bool operator >=(Time time1, Time time2)
         {
             return time1.CompareTo(time2) == 1 || time1.Equals(time2);
         }
+        /// <summary>
+        /// Check if time1 is is smaller or equal to time2.
+        /// </summary>
+        /// <param name="time1"></param>
+        /// <param name="time2"></param>
+        /// <returns>True if time1 is smaller or equal to time2.</returns>
         public static bool operator <=(Time time1, Time time2)
         {
             return time1.CompareTo(time2) == -1 || time1.Equals(time2);
         }
-
+        /// <summary>
+        /// Add time to time.
+        /// </summary>
+        /// <param name="time1"></param>
+        /// <param name="time2"></param>
+        /// <returns>Returns new time instance. When sum exceeds 24:00:00 it returns maximum 24:00:00.</returns>
         public static Time operator +(Time time1, Time time2)
         {
-            var minutes = time1.Minutes + time2.Minutes;
-            var hours = time1.Hours + time2.Hours;
-            var seconds = time1.Seconds + time2.Seconds;
-            var secModulo = seconds % 60;
-            var secDivision = seconds / 60;
-            if (secDivision > 0)
-            {
-                minutes += secDivision;
-                seconds = secModulo;
-            }
-            var minModulo = minutes % 60;
-            var minDivision = minutes / 60;
-            if (minDivision > 0)
-            {
-                hours += minDivision;
-                minutes = minModulo;
-            }
-            var hDivision = hours / 24;
-            if (hDivision > 0)
-            {
-                hours = 24;
-                minutes = 0;
-                seconds = 0;
-            }
-            return new Time(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
+            var operationalValues = CalculateSeconds(time1, time2);
 
+            var result = operationalValues.BaseSeconds + operationalValues.FactorSeconds;
+
+            //If result is greater than 24h set 24h to prevent from getting more hours.
+            result = result > 86400 ? 86400 : result;
+            return CalculateHour(result);
         }
-        private string FormatValue(byte val)
+
+        public static Time operator -(Time time1, Time time2)
         {
-            if (val < 10)
+            var operationalValues = CalculateSeconds(time1, time2);
+
+            if (operationalValues.BaseSeconds < operationalValues.FactorSeconds)
             {
-                return $"0{val}";
+                throw new ArgumentOutOfRangeException(nameof(operationalValues.FactorSeconds),
+                    "Cannot substract bigger time value from base time");
             }
 
-            return $"{val}";
+            var result = operationalValues.BaseSeconds - operationalValues.FactorSeconds;
+            return CalculateHour(result);
+        }
+        /// <summary>
+        /// Add time period to time.
+        /// </summary>
+        /// <param name="timePeriod"></param>
+        /// <returns>Returns new time instance. When sum exceeds 24:00:00 it returns maximum 24:00:00.</returns>
+        public Time Add(TimePeriod timePeriod)
+        {
+            var operationalValues = CalculateSeconds(this, timePeriod);
+
+            var result = operationalValues.BaseSeconds + operationalValues.FactorSeconds;
+
+            //If result is greater than 24h set 24h to prevent from getting more hours.
+            result = result > 86400 ? 86400 : result;
+            return CalculateHour(result);
+        }
+        /// <summary>
+        /// Substract specific time period from time.
+        /// </summary>
+        /// <param name="timePeriod"></param>
+        /// <returns>Returns new time instance.</returns>
+        public Time Substract(TimePeriod timePeriod)
+        {
+            var operationalValues = CalculateSeconds(this, timePeriod);
+
+            if (operationalValues.BaseSeconds < operationalValues.FactorSeconds)
+            {
+                throw new ArgumentOutOfRangeException(nameof(operationalValues.FactorSeconds),
+                    "Cannot substract bigger time value from base time");
+            }
+
+            var result = operationalValues.BaseSeconds - operationalValues.FactorSeconds;
+            return CalculateHour(result);
+        }
+        private static OperationalValues CalculateSeconds(Time time1, Time time2)
+        {
+            var baseSeconds = time1.Seconds + time1.Minutes * 60 + time1.Hours * 3600;
+            var additionalSeconds = time2.Seconds + time2.Minutes * 60 + time2.Hours * 3600;
+            return new OperationalValues(baseSeconds, additionalSeconds);
+        }
+        private static OperationalValues CalculateSeconds(Time time1, TimePeriod timePeriod)
+        {
+            var baseSeconds = time1.Seconds + time1.Minutes * 60 + time1.Hours * 3600;
+            var additionalSeconds = timePeriod.Seconds + timePeriod.Minutes * 60 + timePeriod.Hours * 3600;
+            return new OperationalValues(baseSeconds, Convert.ToInt32(additionalSeconds));
+        }
+        private static Time CalculateHour(int result)
+        {
+            var hours = result / 3600;
+            var minutes = (result - 3600 * hours) / 60;
+            var seconds = result - 60 * minutes - 3600 * hours;
+            return FromIntParams(hours, minutes, seconds);
+        }
+
+        private static Time FromIntParams(int hours, int minutes, int seconds)
+        {
+            return new Time(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
         }
     }
 }
