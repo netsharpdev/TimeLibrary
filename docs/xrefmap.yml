@@ -1,0 +1,485 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: TimeLib
+  name: TimeLib
+  href: api/TimeLib.html
+  commentId: N:TimeLib
+  fullName: TimeLib
+  nameWithType: TimeLib
+- uid: TimeLib.Time
+  name: Time
+  href: api/TimeLib.Time.html
+  commentId: T:TimeLib.Time
+  fullName: TimeLib.Time
+  nameWithType: Time
+- uid: TimeLib.Time.#ctor(System.Byte)
+  name: Time(Byte)
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Byte_
+  commentId: M:TimeLib.Time.#ctor(System.Byte)
+  fullName: TimeLib.Time.Time(System.Byte)
+  nameWithType: Time.Time(Byte)
+- uid: TimeLib.Time.#ctor(System.Byte,System.Byte)
+  name: Time(Byte, Byte)
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Byte_System_Byte_
+  commentId: M:TimeLib.Time.#ctor(System.Byte,System.Byte)
+  fullName: TimeLib.Time.Time(System.Byte, System.Byte)
+  nameWithType: Time.Time(Byte, Byte)
+- uid: TimeLib.Time.#ctor(System.Byte,System.Byte,System.Byte)
+  name: Time(Byte, Byte, Byte)
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Byte_System_Byte_System_Byte_
+  commentId: M:TimeLib.Time.#ctor(System.Byte,System.Byte,System.Byte)
+  fullName: TimeLib.Time.Time(System.Byte, System.Byte, System.Byte)
+  nameWithType: Time.Time(Byte, Byte, Byte)
+- uid: TimeLib.Time.#ctor(System.String)
+  name: Time(String)
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_String_
+  commentId: M:TimeLib.Time.#ctor(System.String)
+  fullName: TimeLib.Time.Time(System.String)
+  nameWithType: Time.Time(String)
+- uid: TimeLib.Time.#ctor*
+  name: Time
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_
+  commentId: Overload:TimeLib.Time.#ctor
+  isSpec: "True"
+  fullName: TimeLib.Time.Time
+  nameWithType: Time.Time
+- uid: TimeLib.Time.Add(TimeLib.TimePeriod)
+  name: Add(TimePeriod)
+  href: api/TimeLib.Time.html#TimeLib_Time_Add_TimeLib_TimePeriod_
+  commentId: M:TimeLib.Time.Add(TimeLib.TimePeriod)
+  fullName: TimeLib.Time.Add(TimeLib.TimePeriod)
+  nameWithType: Time.Add(TimePeriod)
+- uid: TimeLib.Time.Add*
+  name: Add
+  href: api/TimeLib.Time.html#TimeLib_Time_Add_
+  commentId: Overload:TimeLib.Time.Add
+  isSpec: "True"
+  fullName: TimeLib.Time.Add
+  nameWithType: Time.Add
+- uid: TimeLib.Time.CompareTo(TimeLib.Time)
+  name: CompareTo(Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_CompareTo_TimeLib_Time_
+  commentId: M:TimeLib.Time.CompareTo(TimeLib.Time)
+  fullName: TimeLib.Time.CompareTo(TimeLib.Time)
+  nameWithType: Time.CompareTo(Time)
+- uid: TimeLib.Time.CompareTo*
+  name: CompareTo
+  href: api/TimeLib.Time.html#TimeLib_Time_CompareTo_
+  commentId: Overload:TimeLib.Time.CompareTo
+  isSpec: "True"
+  fullName: TimeLib.Time.CompareTo
+  nameWithType: Time.CompareTo
+- uid: TimeLib.Time.Equals(System.Object)
+  name: Equals(Object)
+  href: api/TimeLib.Time.html#TimeLib_Time_Equals_System_Object_
+  commentId: M:TimeLib.Time.Equals(System.Object)
+  fullName: TimeLib.Time.Equals(System.Object)
+  nameWithType: Time.Equals(Object)
+- uid: TimeLib.Time.Equals(TimeLib.Time)
+  name: Equals(Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_Equals_TimeLib_Time_
+  commentId: M:TimeLib.Time.Equals(TimeLib.Time)
+  fullName: TimeLib.Time.Equals(TimeLib.Time)
+  nameWithType: Time.Equals(Time)
+- uid: TimeLib.Time.Equals*
+  name: Equals
+  href: api/TimeLib.Time.html#TimeLib_Time_Equals_
+  commentId: Overload:TimeLib.Time.Equals
+  isSpec: "True"
+  fullName: TimeLib.Time.Equals
+  nameWithType: Time.Equals
+- uid: TimeLib.Time.Hours
+  name: Hours
+  href: api/TimeLib.Time.html#TimeLib_Time_Hours
+  commentId: P:TimeLib.Time.Hours
+  fullName: TimeLib.Time.Hours
+  nameWithType: Time.Hours
+- uid: TimeLib.Time.Hours*
+  name: Hours
+  href: api/TimeLib.Time.html#TimeLib_Time_Hours_
+  commentId: Overload:TimeLib.Time.Hours
+  isSpec: "True"
+  fullName: TimeLib.Time.Hours
+  nameWithType: Time.Hours
+- uid: TimeLib.Time.Minutes
+  name: Minutes
+  href: api/TimeLib.Time.html#TimeLib_Time_Minutes
+  commentId: P:TimeLib.Time.Minutes
+  fullName: TimeLib.Time.Minutes
+  nameWithType: Time.Minutes
+- uid: TimeLib.Time.Minutes*
+  name: Minutes
+  href: api/TimeLib.Time.html#TimeLib_Time_Minutes_
+  commentId: Overload:TimeLib.Time.Minutes
+  isSpec: "True"
+  fullName: TimeLib.Time.Minutes
+  nameWithType: Time.Minutes
+- uid: TimeLib.Time.op_Addition(TimeLib.Time,TimeLib.Time)
+  name: Addition(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Addition_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_Addition(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.Addition(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.Addition(Time, Time)
+- uid: TimeLib.Time.op_Addition*
+  name: Addition
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Addition_
+  commentId: Overload:TimeLib.Time.op_Addition
+  isSpec: "True"
+  fullName: TimeLib.Time.Addition
+  nameWithType: Time.Addition
+- uid: TimeLib.Time.op_Equality(TimeLib.Time,TimeLib.Time)
+  name: Equality(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Equality_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_Equality(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.Equality(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.Equality(Time, Time)
+- uid: TimeLib.Time.op_Equality*
+  name: Equality
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Equality_
+  commentId: Overload:TimeLib.Time.op_Equality
+  isSpec: "True"
+  fullName: TimeLib.Time.Equality
+  nameWithType: Time.Equality
+- uid: TimeLib.Time.op_GreaterThan(TimeLib.Time,TimeLib.Time)
+  name: GreaterThan(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_GreaterThan_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_GreaterThan(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.GreaterThan(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.GreaterThan(Time, Time)
+- uid: TimeLib.Time.op_GreaterThan*
+  name: GreaterThan
+  href: api/TimeLib.Time.html#TimeLib_Time_op_GreaterThan_
+  commentId: Overload:TimeLib.Time.op_GreaterThan
+  isSpec: "True"
+  fullName: TimeLib.Time.GreaterThan
+  nameWithType: Time.GreaterThan
+- uid: TimeLib.Time.op_GreaterThanOrEqual(TimeLib.Time,TimeLib.Time)
+  name: GreaterThanOrEqual(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_GreaterThanOrEqual_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_GreaterThanOrEqual(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.GreaterThanOrEqual(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.GreaterThanOrEqual(Time, Time)
+- uid: TimeLib.Time.op_GreaterThanOrEqual*
+  name: GreaterThanOrEqual
+  href: api/TimeLib.Time.html#TimeLib_Time_op_GreaterThanOrEqual_
+  commentId: Overload:TimeLib.Time.op_GreaterThanOrEqual
+  isSpec: "True"
+  fullName: TimeLib.Time.GreaterThanOrEqual
+  nameWithType: Time.GreaterThanOrEqual
+- uid: TimeLib.Time.op_Inequality(TimeLib.Time,TimeLib.Time)
+  name: Inequality(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Inequality_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_Inequality(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.Inequality(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.Inequality(Time, Time)
+- uid: TimeLib.Time.op_Inequality*
+  name: Inequality
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Inequality_
+  commentId: Overload:TimeLib.Time.op_Inequality
+  isSpec: "True"
+  fullName: TimeLib.Time.Inequality
+  nameWithType: Time.Inequality
+- uid: TimeLib.Time.op_LessThan(TimeLib.Time,TimeLib.Time)
+  name: LessThan(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_LessThan_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_LessThan(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.LessThan(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.LessThan(Time, Time)
+- uid: TimeLib.Time.op_LessThan*
+  name: LessThan
+  href: api/TimeLib.Time.html#TimeLib_Time_op_LessThan_
+  commentId: Overload:TimeLib.Time.op_LessThan
+  isSpec: "True"
+  fullName: TimeLib.Time.LessThan
+  nameWithType: Time.LessThan
+- uid: TimeLib.Time.op_LessThanOrEqual(TimeLib.Time,TimeLib.Time)
+  name: LessThanOrEqual(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_LessThanOrEqual_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_LessThanOrEqual(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.LessThanOrEqual(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.LessThanOrEqual(Time, Time)
+- uid: TimeLib.Time.op_LessThanOrEqual*
+  name: LessThanOrEqual
+  href: api/TimeLib.Time.html#TimeLib_Time_op_LessThanOrEqual_
+  commentId: Overload:TimeLib.Time.op_LessThanOrEqual
+  isSpec: "True"
+  fullName: TimeLib.Time.LessThanOrEqual
+  nameWithType: Time.LessThanOrEqual
+- uid: TimeLib.Time.op_Subtraction(TimeLib.Time,TimeLib.Time)
+  name: Subtraction(Time, Time)
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Subtraction_TimeLib_Time_TimeLib_Time_
+  commentId: M:TimeLib.Time.op_Subtraction(TimeLib.Time,TimeLib.Time)
+  fullName: TimeLib.Time.Subtraction(TimeLib.Time, TimeLib.Time)
+  nameWithType: Time.Subtraction(Time, Time)
+- uid: TimeLib.Time.op_Subtraction*
+  name: Subtraction
+  href: api/TimeLib.Time.html#TimeLib_Time_op_Subtraction_
+  commentId: Overload:TimeLib.Time.op_Subtraction
+  isSpec: "True"
+  fullName: TimeLib.Time.Subtraction
+  nameWithType: Time.Subtraction
+- uid: TimeLib.Time.Seconds
+  name: Seconds
+  href: api/TimeLib.Time.html#TimeLib_Time_Seconds
+  commentId: P:TimeLib.Time.Seconds
+  fullName: TimeLib.Time.Seconds
+  nameWithType: Time.Seconds
+- uid: TimeLib.Time.Seconds*
+  name: Seconds
+  href: api/TimeLib.Time.html#TimeLib_Time_Seconds_
+  commentId: Overload:TimeLib.Time.Seconds
+  isSpec: "True"
+  fullName: TimeLib.Time.Seconds
+  nameWithType: Time.Seconds
+- uid: TimeLib.Time.Substract(TimeLib.TimePeriod)
+  name: Substract(TimePeriod)
+  href: api/TimeLib.Time.html#TimeLib_Time_Substract_TimeLib_TimePeriod_
+  commentId: M:TimeLib.Time.Substract(TimeLib.TimePeriod)
+  fullName: TimeLib.Time.Substract(TimeLib.TimePeriod)
+  nameWithType: Time.Substract(TimePeriod)
+- uid: TimeLib.Time.Substract*
+  name: Substract
+  href: api/TimeLib.Time.html#TimeLib_Time_Substract_
+  commentId: Overload:TimeLib.Time.Substract
+  isSpec: "True"
+  fullName: TimeLib.Time.Substract
+  nameWithType: Time.Substract
+- uid: TimeLib.Time.ToString
+  name: ToString()
+  href: api/TimeLib.Time.html#TimeLib_Time_ToString
+  commentId: M:TimeLib.Time.ToString
+  fullName: TimeLib.Time.ToString()
+  nameWithType: Time.ToString()
+- uid: TimeLib.Time.ToString*
+  name: ToString
+  href: api/TimeLib.Time.html#TimeLib_Time_ToString_
+  commentId: Overload:TimeLib.Time.ToString
+  isSpec: "True"
+  fullName: TimeLib.Time.ToString
+  nameWithType: Time.ToString
+- uid: TimeLib.TimePeriod
+  name: TimePeriod
+  href: api/TimeLib.TimePeriod.html
+  commentId: T:TimeLib.TimePeriod
+  fullName: TimeLib.TimePeriod
+  nameWithType: TimePeriod
+- uid: TimeLib.TimePeriod.#ctor(System.Int64)
+  name: TimePeriod(Int64)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod__ctor_System_Int64_
+  commentId: M:TimeLib.TimePeriod.#ctor(System.Int64)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.Int64)
+  nameWithType: TimePeriod.TimePeriod(Int64)
+- uid: TimeLib.TimePeriod.#ctor(System.Int64,System.Int64)
+  name: TimePeriod(Int64, Int64)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod__ctor_System_Int64_System_Int64_
+  commentId: M:TimeLib.TimePeriod.#ctor(System.Int64,System.Int64)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.Int64, System.Int64)
+  nameWithType: TimePeriod.TimePeriod(Int64, Int64)
+- uid: TimeLib.TimePeriod.#ctor(System.Int64,System.Int64,System.Int64)
+  name: TimePeriod(Int64, Int64, Int64)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod__ctor_System_Int64_System_Int64_System_Int64_
+  commentId: M:TimeLib.TimePeriod.#ctor(System.Int64,System.Int64,System.Int64)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.Int64, System.Int64, System.Int64)
+  nameWithType: TimePeriod.TimePeriod(Int64, Int64, Int64)
+- uid: TimeLib.TimePeriod.#ctor(System.String)
+  name: TimePeriod(String)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod__ctor_System_String_
+  commentId: M:TimeLib.TimePeriod.#ctor(System.String)
+  fullName: TimeLib.TimePeriod.TimePeriod(System.String)
+  nameWithType: TimePeriod.TimePeriod(String)
+- uid: TimeLib.TimePeriod.#ctor*
+  name: TimePeriod
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod__ctor_
+  commentId: Overload:TimeLib.TimePeriod.#ctor
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.TimePeriod
+  nameWithType: TimePeriod.TimePeriod
+- uid: TimeLib.TimePeriod.CompareTo(TimeLib.TimePeriod)
+  name: CompareTo(TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_CompareTo_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.CompareTo(TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.CompareTo(TimeLib.TimePeriod)
+  nameWithType: TimePeriod.CompareTo(TimePeriod)
+- uid: TimeLib.TimePeriod.CompareTo*
+  name: CompareTo
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_CompareTo_
+  commentId: Overload:TimeLib.TimePeriod.CompareTo
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.CompareTo
+  nameWithType: TimePeriod.CompareTo
+- uid: TimeLib.TimePeriod.Equals(System.Object)
+  name: Equals(Object)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Equals_System_Object_
+  commentId: M:TimeLib.TimePeriod.Equals(System.Object)
+  fullName: TimeLib.TimePeriod.Equals(System.Object)
+  nameWithType: TimePeriod.Equals(Object)
+- uid: TimeLib.TimePeriod.Equals(TimeLib.TimePeriod)
+  name: Equals(TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Equals_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.Equals(TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.Equals(TimeLib.TimePeriod)
+  nameWithType: TimePeriod.Equals(TimePeriod)
+- uid: TimeLib.TimePeriod.Equals*
+  name: Equals
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Equals_
+  commentId: Overload:TimeLib.TimePeriod.Equals
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Equals
+  nameWithType: TimePeriod.Equals
+- uid: TimeLib.TimePeriod.Hours
+  name: Hours
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Hours
+  commentId: P:TimeLib.TimePeriod.Hours
+  fullName: TimeLib.TimePeriod.Hours
+  nameWithType: TimePeriod.Hours
+- uid: TimeLib.TimePeriod.Hours*
+  name: Hours
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Hours_
+  commentId: Overload:TimeLib.TimePeriod.Hours
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Hours
+  nameWithType: TimePeriod.Hours
+- uid: TimeLib.TimePeriod.Minutes
+  name: Minutes
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Minutes
+  commentId: P:TimeLib.TimePeriod.Minutes
+  fullName: TimeLib.TimePeriod.Minutes
+  nameWithType: TimePeriod.Minutes
+- uid: TimeLib.TimePeriod.Minutes*
+  name: Minutes
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Minutes_
+  commentId: Overload:TimeLib.TimePeriod.Minutes
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Minutes
+  nameWithType: TimePeriod.Minutes
+- uid: TimeLib.TimePeriod.op_Addition(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: Addition(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Addition_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_Addition(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.Addition(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.Addition(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_Addition*
+  name: Addition
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Addition_
+  commentId: Overload:TimeLib.TimePeriod.op_Addition
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Addition
+  nameWithType: TimePeriod.Addition
+- uid: TimeLib.TimePeriod.op_Equality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: Equality(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Equality_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_Equality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.Equality(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.Equality(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_Equality*
+  name: Equality
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Equality_
+  commentId: Overload:TimeLib.TimePeriod.op_Equality
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Equality
+  nameWithType: TimePeriod.Equality
+- uid: TimeLib.TimePeriod.op_GreaterThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: GreaterThan(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_GreaterThan_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_GreaterThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.GreaterThan(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.GreaterThan(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_GreaterThan*
+  name: GreaterThan
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_GreaterThan_
+  commentId: Overload:TimeLib.TimePeriod.op_GreaterThan
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.GreaterThan
+  nameWithType: TimePeriod.GreaterThan
+- uid: TimeLib.TimePeriod.op_GreaterThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: GreaterThanOrEqual(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_GreaterThanOrEqual_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_GreaterThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.GreaterThanOrEqual(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.GreaterThanOrEqual(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_GreaterThanOrEqual*
+  name: GreaterThanOrEqual
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_GreaterThanOrEqual_
+  commentId: Overload:TimeLib.TimePeriod.op_GreaterThanOrEqual
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.GreaterThanOrEqual
+  nameWithType: TimePeriod.GreaterThanOrEqual
+- uid: TimeLib.TimePeriod.op_Inequality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: Inequality(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Inequality_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_Inequality(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.Inequality(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.Inequality(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_Inequality*
+  name: Inequality
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Inequality_
+  commentId: Overload:TimeLib.TimePeriod.op_Inequality
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Inequality
+  nameWithType: TimePeriod.Inequality
+- uid: TimeLib.TimePeriod.op_LessThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: LessThan(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_LessThan_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_LessThan(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.LessThan(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.LessThan(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_LessThan*
+  name: LessThan
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_LessThan_
+  commentId: Overload:TimeLib.TimePeriod.op_LessThan
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.LessThan
+  nameWithType: TimePeriod.LessThan
+- uid: TimeLib.TimePeriod.op_LessThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: LessThanOrEqual(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_LessThanOrEqual_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_LessThanOrEqual(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.LessThanOrEqual(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.LessThanOrEqual(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_LessThanOrEqual*
+  name: LessThanOrEqual
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_LessThanOrEqual_
+  commentId: Overload:TimeLib.TimePeriod.op_LessThanOrEqual
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.LessThanOrEqual
+  nameWithType: TimePeriod.LessThanOrEqual
+- uid: TimeLib.TimePeriod.op_Subtraction(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  name: Subtraction(TimePeriod, TimePeriod)
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Subtraction_TimeLib_TimePeriod_TimeLib_TimePeriod_
+  commentId: M:TimeLib.TimePeriod.op_Subtraction(TimeLib.TimePeriod,TimeLib.TimePeriod)
+  fullName: TimeLib.TimePeriod.Subtraction(TimeLib.TimePeriod, TimeLib.TimePeriod)
+  nameWithType: TimePeriod.Subtraction(TimePeriod, TimePeriod)
+- uid: TimeLib.TimePeriod.op_Subtraction*
+  name: Subtraction
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_op_Subtraction_
+  commentId: Overload:TimeLib.TimePeriod.op_Subtraction
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Subtraction
+  nameWithType: TimePeriod.Subtraction
+- uid: TimeLib.TimePeriod.Seconds
+  name: Seconds
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Seconds
+  commentId: P:TimeLib.TimePeriod.Seconds
+  fullName: TimeLib.TimePeriod.Seconds
+  nameWithType: TimePeriod.Seconds
+- uid: TimeLib.TimePeriod.Seconds*
+  name: Seconds
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_Seconds_
+  commentId: Overload:TimeLib.TimePeriod.Seconds
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.Seconds
+  nameWithType: TimePeriod.Seconds
+- uid: TimeLib.TimePeriod.ToString
+  name: ToString()
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_ToString
+  commentId: M:TimeLib.TimePeriod.ToString
+  fullName: TimeLib.TimePeriod.ToString()
+  nameWithType: TimePeriod.ToString()
+- uid: TimeLib.TimePeriod.ToString*
+  name: ToString
+  href: api/TimeLib.TimePeriod.html#TimeLib_TimePeriod_ToString_
+  commentId: Overload:TimeLib.TimePeriod.ToString
+  isSpec: "True"
+  fullName: TimeLib.TimePeriod.ToString
+  nameWithType: TimePeriod.ToString
