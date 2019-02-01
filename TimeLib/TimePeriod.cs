@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeLib.Library;
 
 namespace TimeLib
 {
@@ -35,17 +36,17 @@ namespace TimeLib
         }
 
         /// <summary>
-        /// Hours of point in TimePeriod
+        /// Hours
         /// </summary>
         public long Hours { get; }
 
         /// <summary>
-        /// Minutes of point in TimePeriod
+        /// Minutes
         /// </summary>
         public long Minutes { get; }
 
         /// <summary>
-        /// Seconds of point in TimePeriod
+        /// Seconds
         /// </summary>
         public long Seconds { get; }
 
@@ -55,7 +56,7 @@ namespace TimeLib
         /// <returns>Returns formatted TimePeriod HH:mm:ss.</returns>
         public override string ToString()
         {
-            return $"{Hours}:{Minutes}:{Seconds}";
+            return $"{Hours}:{Utilities.FormatValue(Minutes)}:{Utilities.FormatValue(Seconds)}";
         }
 
         /// <summary>
@@ -143,9 +144,6 @@ namespace TimeLib
             var operationalValues = CalculateSeconds(timePeriod1, timePeriod2);
 
             var result = operationalValues.BaseSeconds + operationalValues.FactorSeconds;
-
-            //If result is greater than 24h set 24h to prevent from getting more hours.
-            result = result > 86400 ? 86400 : result;
             return CalculateHour(result);
 
         }
@@ -156,7 +154,7 @@ namespace TimeLib
             if (operationalValues.BaseSeconds < operationalValues.FactorSeconds)
             {
                 throw new ArgumentOutOfRangeException(nameof(operationalValues.FactorSeconds),
-                    "Cannot substract bigger timeperiod value from base timeperiod");
+                    "Cannot substract greater timeperiod value from base timeperiod");
             }
 
             var result = operationalValues.BaseSeconds - operationalValues.FactorSeconds;

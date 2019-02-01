@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeLib.Library;
 
 namespace TimeLib
 {
@@ -19,6 +20,24 @@ namespace TimeLib
             internal int FactorSeconds { get; set; }
         }
 
+        public Time(string time)
+        {
+            var splittedTime = time.Split(':');
+            if (splittedTime.Length < 3)
+                throw new ArgumentException("Argument has to be in proper format HH:mm:ss", nameof(time));
+            var hour = Convert.ToByte(splittedTime[0]);;
+            var minute = Convert.ToByte(splittedTime[1]);
+            var second = Convert.ToByte(splittedTime[2]);
+            if (hour > 24)
+                throw new ArgumentOutOfRangeException(nameof(hour), "Hours cannot exceed 24");
+            if (minute > 59)
+                throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59");
+            if (second > 59)
+                throw new ArgumentOutOfRangeException(nameof(second), "Seconds cannot exceed 59");
+            Hours = hour;
+            Minutes = minute;
+            Seconds = second;
+        }
         public Time(byte hour) : this(hour, 0){}
 
         public Time(byte hour, byte minute) : this(hour, minute, 0){}
@@ -37,17 +56,17 @@ namespace TimeLib
         }
 
         /// <summary>
-        /// Hours of point in time
+        /// Hours
         /// </summary>
         public byte Hours { get; }
 
         /// <summary>
-        /// Minutes of point in time
+        /// Minutes
         /// </summary>
         public byte Minutes { get; }
 
         /// <summary>
-        /// Seconds of point in time
+        /// Seconds
         /// </summary>
         public byte Seconds { get; }
 
@@ -57,7 +76,7 @@ namespace TimeLib
         /// <returns>Returns formatted time HH:mm:ss.</returns>
         public override string ToString()
         {
-            return $"{FormatValue(Hours)}:{FormatValue(Minutes)}:{FormatValue(Seconds)}";
+            return $"{Utilities.FormatValue(Hours)}:{Utilities.FormatValue(Minutes)}:{Utilities.FormatValue(Seconds)}";
         }
 
         /// <summary>
@@ -183,15 +202,6 @@ namespace TimeLib
         private static Time FromIntParams(int hours, int minutes, int seconds)
         {
             return new Time(Convert.ToByte(hours), Convert.ToByte(minutes), Convert.ToByte(seconds));
-        }
-        private string FormatValue(byte val)
-        {
-            if (val < 10)
-            {
-                return $"0{val}";
-            }
-
-            return $"{val}";
         }
     }
 }
