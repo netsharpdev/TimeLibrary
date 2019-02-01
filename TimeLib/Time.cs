@@ -19,7 +19,10 @@ namespace TimeLib
             internal int BaseSeconds { get; set; }
             internal int FactorSeconds { get; set; }
         }
-
+        /// <summary>
+        /// Create time from string
+        /// </summary>
+        /// <param name="time">Format HH:mm:ss</param>
         public Time(string time)
         {
             var splittedTime = time.Split(':');

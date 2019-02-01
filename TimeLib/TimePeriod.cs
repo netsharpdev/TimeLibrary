@@ -19,6 +19,28 @@ namespace TimeLib
             internal long BaseSeconds { get; set; }
             internal long FactorSeconds { get; set; }
         }
+        /// <summary>
+        /// Create time period from string.
+        /// </summary>
+        /// <param name="period">Format H:mm:ss</param>
+        public TimePeriod(string period)
+        {
+            var splittedPeriod = period.Split(':');
+            if (splittedPeriod.Length < 3)
+                throw new ArgumentException("Argument has to be in proper format H:mm:ss", nameof(period));
+            var hour = Convert.ToByte(splittedPeriod[0]); ;
+            var minute = Convert.ToByte(splittedPeriod[1]);
+            var second = Convert.ToByte(splittedPeriod[2]);
+            if (hour < 0)
+                throw new ArgumentOutOfRangeException(nameof(hour), "Minutes cannot be smaller than 0");
+            if (minute > 59 || minute < 0)
+                throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59 and be smaller than 0");
+            if (second > 59 || second < 0)
+                throw new ArgumentOutOfRangeException(nameof(second), "Seconds cannot exceed 59 and be smaller than 0");
+            Hours = hour;
+            Minutes = minute;
+            Seconds = second;
+        }
 
         public TimePeriod(long hour) : this(hour, 0) { }
 
@@ -26,10 +48,12 @@ namespace TimeLib
 
         public TimePeriod(long hour, long minute, long second)
         {
-            if (minute > 59)
-                throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59");
-            if (second > 59)
-                throw new ArgumentOutOfRangeException(nameof(second), "Seconds cannot exceed 59");
+            if (hour < 0)
+                throw new ArgumentOutOfRangeException(nameof(hour), "Minutes cannot be smaller than 0");
+            if (minute > 59 || minute < 0)
+                throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59 and be smaller than 0");
+            if (second > 59 || second < 0)
+                throw new ArgumentOutOfRangeException(nameof(second), "Seconds cannot exceed 59 and be smaller than 0");
             Hours = hour;
             Minutes = minute;
             Seconds = second;
