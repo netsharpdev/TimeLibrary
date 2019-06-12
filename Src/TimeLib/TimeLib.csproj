@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.1.0</Version>
+    <Authors>Pawel Pindel</Authors>
+    <Company>Pawel Pindel NETSharp Development</Company>
+    <Description>Time library is a small .net standard lib created to allow using Time without DateTime structure. It could be helpful while you are building clock or timer.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://netsharpdev.github.io/TimeLibrary/</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryUrl>https://github.com/NetsharpDEV/TimeLibrary</RepositoryUrl>
+    <PackageTags>Time, date, period, timing</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
