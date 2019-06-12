@@ -13,24 +13,24 @@ references:
   commentId: T:TimeLib.Time
   fullName: TimeLib.Time
   nameWithType: Time
-- uid: TimeLib.Time.#ctor(System.Byte)
-  name: Time(Byte)
-  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Byte_
-  commentId: M:TimeLib.Time.#ctor(System.Byte)
-  fullName: TimeLib.Time.Time(System.Byte)
-  nameWithType: Time.Time(Byte)
-- uid: TimeLib.Time.#ctor(System.Byte,System.Byte)
-  name: Time(Byte, Byte)
-  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Byte_System_Byte_
-  commentId: M:TimeLib.Time.#ctor(System.Byte,System.Byte)
-  fullName: TimeLib.Time.Time(System.Byte, System.Byte)
-  nameWithType: Time.Time(Byte, Byte)
-- uid: TimeLib.Time.#ctor(System.Byte,System.Byte,System.Byte)
-  name: Time(Byte, Byte, Byte)
-  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Byte_System_Byte_System_Byte_
-  commentId: M:TimeLib.Time.#ctor(System.Byte,System.Byte,System.Byte)
-  fullName: TimeLib.Time.Time(System.Byte, System.Byte, System.Byte)
-  nameWithType: Time.Time(Byte, Byte, Byte)
+- uid: TimeLib.Time.#ctor(System.Int32)
+  name: Time(Int32)
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Int32_
+  commentId: M:TimeLib.Time.#ctor(System.Int32)
+  fullName: TimeLib.Time.Time(System.Int32)
+  nameWithType: Time.Time(Int32)
+- uid: TimeLib.Time.#ctor(System.Int32,System.Int32)
+  name: Time(Int32, Int32)
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Int32_System_Int32_
+  commentId: M:TimeLib.Time.#ctor(System.Int32,System.Int32)
+  fullName: TimeLib.Time.Time(System.Int32, System.Int32)
+  nameWithType: Time.Time(Int32, Int32)
+- uid: TimeLib.Time.#ctor(System.Int32,System.Int32,System.Int32)
+  name: Time(Int32, Int32, Int32)
+  href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_Int32_System_Int32_System_Int32_
+  commentId: M:TimeLib.Time.#ctor(System.Int32,System.Int32,System.Int32)
+  fullName: TimeLib.Time.Time(System.Int32, System.Int32, System.Int32)
+  nameWithType: Time.Time(Int32, Int32, Int32)
 - uid: TimeLib.Time.#ctor(System.String)
   name: Time(String)
   href: api/TimeLib.Time.html#TimeLib_Time__ctor_System_String_
@@ -219,6 +219,19 @@ references:
   isSpec: "True"
   fullName: TimeLib.Time.Subtraction
   nameWithType: Time.Subtraction
+- uid: TimeLib.Time.Parse(System.DateTime)
+  name: Parse(DateTime)
+  href: api/TimeLib.Time.html#TimeLib_Time_Parse_System_DateTime_
+  commentId: M:TimeLib.Time.Parse(System.DateTime)
+  fullName: TimeLib.Time.Parse(System.DateTime)
+  nameWithType: Time.Parse(DateTime)
+- uid: TimeLib.Time.Parse*
+  name: Parse
+  href: api/TimeLib.Time.html#TimeLib_Time_Parse_
+  commentId: Overload:TimeLib.Time.Parse
+  isSpec: "True"
+  fullName: TimeLib.Time.Parse
+  nameWithType: Time.Parse
 - uid: TimeLib.Time.Seconds
   name: Seconds
   href: api/TimeLib.Time.html#TimeLib_Time_Seconds

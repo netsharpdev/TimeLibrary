@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Source/Studia/TimeLibrary/docs-config",
+  "source_base_path": "C:/Source/Libs/TimeLibrary/docs-config",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TimeLib.Time.html",
-          "hash": "Tmq0uFvO+pZsFjakAr2kTA=="
+          "hash": "05BC97y2TcpoIKdp4JoWBQ=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TimeLib.TimePeriod.html",
-          "hash": "brsWN0/yHgU9CjO17e5qeA=="
+          "hash": "9TzdHo5yTAFdtlJg18kyIg=="
         }
       },
       "is_incremental": true,
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "voDJZDRS2QuUkFQhYXgP2Q=="
+          "hash": "K4RTT7ZdjRAN4i3dAhbgZw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "znO1Kys7mnVF66+vVzHafQ=="
+          "hash": "XW89+ETjdZfAcq39Ug2c/A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "tT72VHrTe1K4DHmi8kHU+Q=="
+          "hash": "m2C5xdt5WYtHAkLq4APthA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+          "hash": "1Xdjw8Ib7j95/TiJDj+CFw=="
         }
       },
       "is_incremental": false,
@@ -121,24 +121,24 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 1
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 2
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
         }
       }
     },

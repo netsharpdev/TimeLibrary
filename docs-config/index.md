@@ -9,11 +9,11 @@ To see the docs go [here](https://netsharpdev.github.io/TimeLibrary/api/TimeLib.
 Use your nuget package manager and type following:
 
 ```bash
-Install-Package TimeLib -Version 1.0.0
+Install-Package TimeLib
 ```
 
 Installation via .NET CLI
 
 ```bash
-dotnet add package TimeLib --version 1.0.0
+dotnet add package TimeLib
 ```
