@@ -260,6 +260,15 @@ namespace TimeLib
             var result = operationalValues.BaseSeconds - operationalValues.FactorSeconds;
             return CalculateHour(result);
         }
+        /// <summary>
+        /// Parse datetime and extract time.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns>Returns new instance of time.</returns>
+        public static Time Parse(DateTime date)
+        {
+            return new Time(date.Hour, date.Minute, date.Second);
+        }
         private static OperationalValues CalculateSeconds(Time time1, Time time2)
         {
             var baseSeconds = time1.Seconds + time1.Minutes * 60 + time1.Hours * 3600;
