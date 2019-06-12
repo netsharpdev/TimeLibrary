@@ -28,9 +28,9 @@ namespace TimeLib
             var splittedPeriod = period.Split(':');
             if (splittedPeriod.Length < 3)
                 throw new ArgumentException("Argument has to be in proper format H:mm:ss", nameof(period));
-            var hour = Convert.ToByte(splittedPeriod[0]); ;
-            var minute = Convert.ToByte(splittedPeriod[1]);
-            var second = Convert.ToByte(splittedPeriod[2]);
+            var hour = Convert.ToInt64(splittedPeriod[0]); ;
+            var minute = Convert.ToInt64(splittedPeriod[1]);
+            var second = Convert.ToInt64(splittedPeriod[2]);
             if (hour < 0)
                 throw new ArgumentOutOfRangeException(nameof(hour), "Minutes cannot be smaller than 0");
             if (minute > 59 || minute < 0)

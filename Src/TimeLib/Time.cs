@@ -16,8 +16,8 @@ namespace TimeLib
                 BaseSeconds = baseSeconds;
                 FactorSeconds = factorSeconds;
             }
-            internal int BaseSeconds { get; set; }
-            internal int FactorSeconds { get; set; }
+            internal int BaseSeconds { get; }
+            internal int FactorSeconds { get; }
         }
         /// <summary>
         /// Create time from string.
@@ -41,13 +41,11 @@ namespace TimeLib
             Minutes = minute;
             Seconds = second;
         }
-        public Time(byte hour) : this(hour, 0){}
+        public Time(int hour) : this(hour, 0){}
 
-        public Time(byte hour, byte minute) : this(hour, minute, 0){}
-
-        public Time(byte hour, byte minute, byte second)
+        public Time(int hour, int minute, int second)
         {
-            if(hour > 24)
+            if (hour > 24)
                 throw new ArgumentOutOfRangeException(nameof(hour), "Hours cannot exceed 24");
             if (minute > 59)
                 throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59");
@@ -58,20 +56,23 @@ namespace TimeLib
             Seconds = second;
         }
 
+        public Time(int hour, int minute) : this(hour, minute, 0){}
+
+
         /// <summary>
         /// Hours.
         /// </summary>
-        public byte Hours { get; }
+        public int Hours { get; }
 
         /// <summary>
         /// Minutes.
         /// </summary>
-        public byte Minutes { get; }
+        public int Minutes { get; }
 
         /// <summary>
         /// Seconds.
         /// </summary>
-        public byte Seconds { get; }
+        public int Seconds { get; }
 
         /// <summary>
         /// Convert structure into string.
