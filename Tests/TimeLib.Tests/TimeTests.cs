@@ -127,6 +127,22 @@ namespace Tests
             var result = time1.Add(period);
             Assert.AreEqual(new Time(15, 15, 5), result);
         }
+
+        [Test]
+        public void ParseDateTimeTest()
+        {
+            var sec = 31;
+            var min = 59;
+            var hours = 8;
+
+            var time = new Time(hours,min,sec);
+            var date = new DateTime(2010,12,01, hours, min, sec);
+
+            var timeFromDate = Time.Parse(date);
+
+            Assert.AreEqual(time, timeFromDate);
+        }
+
         [Test]
         public void SubstractTimePeriodTest()
         {

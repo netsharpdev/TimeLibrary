@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TimeLib.Library;
 
 namespace TimeLib
@@ -16,8 +12,8 @@ namespace TimeLib
                 BaseSeconds = baseSeconds;
                 FactorSeconds = factorSeconds;
             }
-            internal int BaseSeconds { get; set; }
-            internal int FactorSeconds { get; set; }
+            internal int BaseSeconds { get; }
+            internal int FactorSeconds { get; }
         }
         /// <summary>
         /// Create time from string.
@@ -41,13 +37,11 @@ namespace TimeLib
             Minutes = minute;
             Seconds = second;
         }
-        public Time(byte hour) : this(hour, 0){}
+        public Time(int hour) : this(hour, 0){}
 
-        public Time(byte hour, byte minute) : this(hour, minute, 0){}
-
-        public Time(byte hour, byte minute, byte second)
+        public Time(int hour, int minute, int second)
         {
-            if(hour > 24)
+            if (hour > 24)
                 throw new ArgumentOutOfRangeException(nameof(hour), "Hours cannot exceed 24");
             if (minute > 59)
                 throw new ArgumentOutOfRangeException(nameof(minute), "Minutes cannot exceed 59");
@@ -58,20 +52,23 @@ namespace TimeLib
             Seconds = second;
         }
 
+        public Time(int hour, int minute) : this(hour, minute, 0){}
+
+
         /// <summary>
         /// Hours.
         /// </summary>
-        public byte Hours { get; }
+        public int Hours { get; }
 
         /// <summary>
         /// Minutes.
         /// </summary>
-        public byte Minutes { get; }
+        public int Minutes { get; }
 
         /// <summary>
         /// Seconds.
         /// </summary>
-        public byte Seconds { get; }
+        public int Seconds { get; }
 
         /// <summary>
         /// Convert structure into string.
@@ -258,6 +255,15 @@ namespace TimeLib
 
             var result = operationalValues.BaseSeconds - operationalValues.FactorSeconds;
             return CalculateHour(result);
+        }
+        /// <summary>
+        /// Parse datetime and extract time.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns>Returns new instance of time.</returns>
+        public static Time Parse(DateTime date)
+        {
+            return new Time(date.Hour, date.Minute, date.Second);
         }
         private static OperationalValues CalculateSeconds(Time time1, Time time2)
         {
