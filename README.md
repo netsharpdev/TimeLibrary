@@ -1,5 +1,7 @@
 # **TimeLibrary**
 
+[Nuget gallery](https://www.nuget.org/packages/TimeLib/)
+
 Time library is a small lib created to allow using Time without DateTime structure. It could be helpful while you are building clock or timer.
 
 [Here](https://netsharpdev.github.io/TimeLibrary/) is the documentation.
